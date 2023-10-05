@@ -35,7 +35,7 @@ avl_t *avl_insert_recursive(avl_t **tree, avl_t *parent,
 	else
 		return (*tree);
 
-	rd = balance(*tree);
+	rd = binary_tree_balance(*tree);
 	if (rd > 1 && (*tree)->left->n > value)
 		*tree = binary_tree_rotate_right(*tree);
 	else if (rd < -1 && (*tree)->right->n < value)
